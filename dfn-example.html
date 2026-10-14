@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML DFN Element</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            background: linear-gradient(135deg, #e8eddf, #d8e2c8, #f5f1e6);
+            color: #344735;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 720px;
+            background: #fffdf7;
+            padding: 40px;
+            border-radius: 22px;
+            border: 1px solid #d5dfc5;
+            box-shadow: 0 18px 45px rgba(57, 78, 48, 0.15);
+        }
+
+        .label {
+            display: inline-block;
+            padding: 7px 13px;
+            background: #e4ecd8;
+            color: #557044;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #405d38;
+            font-size: 32px;
+            margin-bottom: 14px;
+        }
+
+        .subtitle {
+            color: #78846d;
+            font-size: 14px;
+            margin-bottom: 28px;
+            line-height: 1.7;
+        }
+
+        .example {
+            padding: 25px;
+            background: #f4f5eb;
+            border-left: 5px solid #829b65;
+            border-radius: 12px;
+        }
+
+        .example p {
+            font-size: 17px;
+            line-height: 2;
+            color: #455344;
+        }
+
+        dfn {
+            font-style: normal;
+            font-weight: bold;
+            color: #52783d;
+            background: #e1ebd5;
+            padding: 3px 8px;
+            border-radius: 6px;
+            border-bottom: 2px solid #829b65;
+        }
+
+        .info {
+            margin-top: 25px;
+            padding: 18px;
+            background: #fbf4e5;
+            border: 1px solid #eee0bd;
+            border-radius: 12px;
+            color: #786644;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .info strong {
+            color: #80652e;
+        }
+
+        code {
+            background: #e8eddf;
+            color: #405d38;
+            padding: 3px 6px;
+            border-radius: 5px;
+        }
+
+        footer {
+            margin-top: 28px;
+            text-align: center;
+            font-size: 12px;
+            color: #89917f;
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                padding: 25px 20px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .example {
+                padding: 18px;
+            }
+
+            .example p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <span class="label">HTML5 ELEMENT</span>
+
+        <h1>Definition Element</h1>
+
+        <p class="subtitle">
+            Learn how the HTML dfn element identifies
+            a term being defined in a sentence.
+        </p>
+
+        <div class="example">
+            <p>
+                The <dfn>dfn</dfn> element is an element which is used
+                to set off the defining instance of a term.
+                Now that's a self-contained example!
+            </p>
+        </div>
+
+        <div class="info">
+            <strong>💡 What does &lt;dfn&gt; do?</strong><br>
+            The <code>&lt;dfn&gt;</code> element identifies the term
+            being defined in the surrounding text. By default,
+            browsers usually display it in italics. In this example,
+            CSS changes its appearance to bold green text.
+        </div>
+
+        <footer>
+            HTML &amp; CSS Practice | Definition Example
+        </footer>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML5 Canvas Example</title>
+
+    <style>
+        /* ===== RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ===== BODY ===== */
+        body {
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #12002f, #4b0082, #8a2be2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            width: 90%;
+            max-width: 700px;
+            padding: 40px;
+            text-align: center;
+
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 25px;
+
+            backdrop-filter: blur(15px);
+
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        /* ===== TITLE ===== */
+        h1 {
+            color: white;
+            font-size: 36px;
+            margin-bottom: 10px;
+
+            text-shadow:
+                0 0 10px #ff69b4,
+                0 0 20px #ff69b4;
+        }
+
+        /* ===== DESCRIPTION ===== */
+        .description {
+            color: #f5ddff;
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* ===== CANVAS BOX ===== */
+        .canvas-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 20px;
+
+            box-shadow:
+                inset 0 0 20px rgba(255, 255, 255, 0.08),
+                0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ===== CANVAS ===== */
+        #canvas1 {
+            width: 400px;
+            height: 400px;
+
+            background-color: white;
+
+            border: 5px solid #ff69b4;
+            border-radius: 15px;
+
+            box-shadow:
+                0 0 15px #ff69b4,
+                0 0 30px rgba(255, 105, 180, 0.5);
+        }
+
+        /* ===== INFORMATION ===== */
+        .info {
+            margin-top: 25px;
+            padding: 15px;
+
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+
+            color: #f8e9ff;
+            line-height: 1.6;
+        }
+
+        .info strong {
+            color: #ffb6e6;
+        }
+
+        /* ===== ERROR MESSAGE ===== */
+        .error {
+            color: red;
+            font-weight: bold;
+            padding: 20px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 550px) {
+
+            .container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            #canvas1 {
+                width: 300px;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🎨 HTML5 Canvas</h1>
+
+    
+
+        <div class="canvas-box">
+
+            <canvas id="canvas1" height="400" width="400">
+
+                <p class="error">
+                    Canvas-Supporting Browser Required
+                </p>
+
+            </canvas>
+
+        </div>
+
+    <script type="text/javascript">
+
+        var canvas = document.getElementById("canvas1");
+
+        var context = canvas.getContext("2d");
+
+
+        /* draw simple figure of red and green squares */
+
+        context.fillStyle = "rgb(255,0,0)";
+
+        context.fillRect(0,0,100,100);
+
+
+        context.fillStyle = "rgb(0,255,0)";
+
+        context.fillRect(25,25,50,50);
+
+    </script>
+
+</body>
+</html>
+```

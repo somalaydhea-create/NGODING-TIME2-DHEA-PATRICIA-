@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column Alignment</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #32104a, #8f3c83, #f1a7c5);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 35px;
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 22px;
+            box-shadow: 0 20px 45px rgba(35, 10, 45, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+        }
+
+        table {
+            width: 400px;
+            max-width: 100%;
+            margin: auto;
+            border-collapse: collapse;
+            overflow: hidden;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 8px 22px rgba(90, 35, 90, 0.12);
+        }
+
+        td {
+            padding: 18px 15px;
+            border: 1px solid #e5cce5;
+            color: #44254b;
+            font-size: 16px;
+        }
+
+        tr:first-child td {
+            background: #713b7e;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(2) td,
+        tr:nth-child(3) td {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        tr:nth-child(2) {
+            background: #fff0f7;
+        }
+
+        tr:nth-child(3) {
+            background: #f8eafa;
+        }
+
+        tr:nth-child(2) td:first-child,
+        tr:nth-child(3) td:first-child {
+            color: #d63384;
+        }
+
+        tr:nth-child(2) td:last-child,
+        tr:nth-child(3) td:last-child {
+            color: #713b7e;
+        }
+
+        tr:hover td {
+            background-color: #fce3f0;
+            color: #44254b;
+            transition: 0.3s ease;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 18px;
+            }
+
+            td {
+                padding: 13px 8px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table border="1" width="400">
+            <colgroup>
+                <col width="150">
+                <col>
+            </colgroup>
+
+            <tr>
+                <td style="text-align: center;">
+                    This column is aligned to the center.
+                </td>
+                <td style="text-align: right;">
+                    This one is aligned to the right.
+                </td>
+            </tr>
+
+            <tr>
+                <td>!</td>
+                <td>?</td>
+            </tr>
+
+            <tr>
+                <td>!</td>
+                <td>?</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

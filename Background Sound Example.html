@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Background Sound Example</title>
+
+    <style>
+
+        /* ==============================
+           RESET
+        ============================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        /* ==============================
+           BODY
+        ============================== */
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 30px 20px;
+
+            color: white;
+
+            background:
+                radial-gradient(
+                    circle at top left,
+                    #7c3aed,
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at bottom right,
+                    #ec4899,
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #080014,
+                    #17102f,
+                    #090014
+                );
+        }
+
+
+        /* ==============================
+           CONTAINER
+        ============================== */
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+
+            padding: 40px;
+
+            text-align: center;
+
+            background: rgba(255, 255, 255, 0.10);
+
+            border: 1px solid rgba(255, 255, 255, 0.20);
+
+            border-radius: 25px;
+
+            backdrop-filter: blur(15px);
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.45);
+        }
+
+
+        /* ==============================
+           TITLE
+        ============================== */
+
+        h1 {
+            margin: 0 0 12px;
+
+            font-size: 38px;
+
+            color: #fff;
+
+            text-shadow:
+                0 0 10px #c084fc,
+                0 0 25px #9333ea,
+                0 0 40px #7e22ce;
+        }
+
+
+        .description {
+            margin-bottom: 35px;
+
+            color: #ddd;
+
+            line-height: 1.7;
+        }
+
+
+        /* ==============================
+           SOUND CARDS
+        ============================== */
+
+        .sound-card {
+            position: relative;
+
+            margin: 20px 0;
+
+            padding: 25px;
+
+            text-align: left;
+
+            background: rgba(255, 255, 255, 0.08);
+
+            border: 1px solid rgba(255, 255, 255, 0.15);
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.25);
+
+            transition: .3s ease;
+        }
+
+
+        .sound-card:hover {
+            transform: translateY(-5px);
+
+            background: rgba(255, 255, 255, 0.13);
+
+            box-shadow:
+                0 15px 35px rgba(0, 0, 0, 0.35);
+        }
+
+
+        /* ==============================
+           ICON
+        ============================== */
+
+        .icon {
+            font-size: 30px;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* ==============================
+           TEXT
+        ============================== */
+
+        h2 {
+            margin: 0 0 8px;
+
+            font-size: 20px;
+
+            color: #e9d5ff;
+        }
+
+
+        p {
+            margin: 0;
+
+            color: #cfcfcf;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+
+        code {
+            padding: 3px 7px;
+
+            border-radius: 5px;
+
+            background: rgba(0, 0, 0, 0.25);
+
+            color: #f0abfc;
+
+            font-family: Consolas, monospace;
+        }
+
+
+        /* ==============================
+           WARNING
+        ============================== */
+
+        .warning {
+            margin-top: 30px;
+
+            padding: 18px;
+
+            border-radius: 12px;
+
+            background: rgba(255, 193, 7, 0.12);
+
+            border: 1px solid rgba(255, 193, 7, 0.25);
+
+            color: #ffe9a8;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+
+        /* ==============================
+           RESPONSIVE
+        ============================== */
+
+        @media (max-width: 600px) {
+
+            .container {
+                padding: 25px 18px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .sound-card {
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <h1>🔊 Background Sound</h1>
+
+        <p class="description">
+            Examples of using the
+            <code>&lt;bgsound&gt;</code>
+            element.
+        </p>
+
+
+        <!-- assume examples are in different pages -->
+
+        <div class="sound-card">
+
+            <div class="icon">
+                🎵
+            </div>
+
+            <h2>Sound 1</h2>
+
+            <p>
+                Background sound using a MIDI file.
+            </p>
+
+            <bgsound src="sound1.mid">
+
+        </div>
+
+
+        <div class="sound-card">
+
+            <div class="icon">
+                🔁
+            </div>
+
+            <h2>Sound 2</h2>
+
+            <p>
+                Background sound with infinite looping.
+            </p>
+
+            <bgsound src="sound2.au" loop="infinite">
+
+        </div>
+
+
+        <div class="sound-card">
+
+            <div class="icon">
+                🔉
+            </div>
+
+            <h2>Sound 3</h2>
+
+            <p>
+                Background sound with 3 loops and volume set to -2000.
+            </p>
+
+            <bgsound src="sound3.wav" loop="3" volume="-2000">
+
+        </div>
+
+
+
+
+</body>
+
+</html>

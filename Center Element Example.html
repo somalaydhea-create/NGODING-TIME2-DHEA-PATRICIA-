@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center Element Example</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(
+                135deg,
+                #020b1c,
+                #092650,
+                #124a7c
+            );
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            padding: 45px 30px;
+            text-align: center;
+            background: rgba(8, 27, 55, 0.95);
+            border: 1px solid rgba(94, 203, 255, 0.4);
+            border-radius: 25px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .example {
+            margin-bottom: 35px;
+            padding: 25px;
+            color: #eaf6ff;
+            font-size: 22px;
+            line-height: 1.7;
+            background: #0d2c52;
+            border: 1px solid #28669a;
+            border-radius: 15px;
+            transition: 0.3s ease;
+        }
+
+        .example:last-child {
+            margin-bottom: 0;
+        }
+
+        .example p {
+            margin: 8px 0;
+            color: #5ecbff;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 0 0 12px rgba(94, 203, 255, 0.3);
+        }
+
+        .example:hover {
+            transform: translateY(-5px);
+            border-color: #5ecbff;
+            box-shadow: 0 10px 25px rgba(0, 153, 255, 0.2);
+        }
+
+        /* Pengganti modern untuk elemen center */
+        .center-example {
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px 15px;
+            }
+
+            .example {
+                font-size: 18px;
+            }
+
+            .example p {
+                font-size: 21px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="example center-example">
+            <center>This is in the center of the page.</center>
+        </div>
+
+        <div class="example">
+            <center>
+                <p>Larry</p>
+                <p>Curly</p>
+                <p>Moe</p>
+            </center>
+        </div>
+
+    </div>
+
+</body>
+</html>

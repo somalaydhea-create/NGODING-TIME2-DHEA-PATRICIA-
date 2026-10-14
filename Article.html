@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Article</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #acbbfd, #764ba2);
+            padding: 50px 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .intro {
+            padding: 18px 25px;
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            font-size: 17px;
+        }
+
+        article {
+            background: rgba(255, 255, 255, 0.97);
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+            border-left: 6px solid #667eea;
+            transition: 0.3s ease;
+        }
+
+        article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        article header {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: 32px;
+            color: #4f46a5;
+        }
+
+        time {
+            color: #888;
+            font-size: 14px;
+        }
+
+        article > p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+        }
+
+        article > p::first-letter {
+            font-size: 35px;
+            font-weight: bold;
+            color: #667eea;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <p class="intro">There are other things in this page.</p> 
+
+        <article id="article1"> 
+
+            <header> 
+                <h1>HTML5 is Coming Soon!</h1> 
+                <p>
+                    <time pubdate datetime="2009-10-31T12:30-11:00"></time>
+                </p> 
+            </header> 
+
+            <p>
+                The new HTML5 specification is in the works. While many features are 
+                not currently implemented or even well defined yet, progress is being made. 
+                Stay tuned to see more new HTML elements added to your Web documents in the 
+                years to come.
+            </p> 
+
+        </article> 
+
+        <p class="intro">There are other things in this page.</p>
+
+    </div>
+
+</body>
+</html>

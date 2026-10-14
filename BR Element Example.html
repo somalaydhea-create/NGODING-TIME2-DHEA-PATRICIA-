@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR Element Example</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 800px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .box {
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #f8f9ff, #eef1ff);
+            border-left: 6px solid #667eea;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .box:last-child {
+            margin-bottom: 0;
+        }
+
+        p {
+            margin: 0;
+            color: #333;
+            font-size: 19px;
+            line-height: 1.8;
+        }
+
+        address {
+            font-size: 19px;
+            line-height: 1.8;
+            font-style: normal;
+            color: #333;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+            transition: 0.3s ease;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        code {
+            padding: 3px 7px;
+            border-radius: 5px;
+            background: #e4e7ff;
+            color: #5a4fcf;
+            font-family: Consolas, monospace;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="box">
+            <p>
+                This text will be broken here <br>
+                and continued on a new line.
+            </p>
+        </div>
+
+        <div class="box">
+            <p>
+                XHTML<br />syntax!
+            </p>
+        </div>
+
+        <div class="box">
+            <address>
+
+                PINT Inc.<br>
+
+                2105 Garnet Ave<br>
+
+                San Diego, CA 92109<br>
+
+            </address>
+        </div>
+
+    </div>
+
+</body>
+</html>

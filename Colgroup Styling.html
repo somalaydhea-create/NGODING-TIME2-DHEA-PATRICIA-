@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colgroup Styling - Modern Table</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #071426, #102b46, #0b1728);
+            color: #f1f5f9;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 34px;
+            color: #4ade80;
+            margin-bottom: 10px;
+            text-shadow: 0 0 15px rgba(74, 222, 128, 0.3);
+        }
+
+        .header p {
+            color: #b8c7d9;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .table-card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            border-radius: 18px;
+            padding: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            min-width: 650px;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        caption {
+            caption-side: top;
+            color: #4ade80;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 0 0 20px;
+            text-align: left;
+        }
+
+        th {
+            background: #163b5c;
+            color: #ffffff;
+            padding: 17px 14px;
+            text-align: left;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 16px 14px;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+            color: #e2e8f0;
+            font-size: 14px;
+        }
+
+        /* Kelompok kolom pertama */
+        col.first-group {
+            background-color: rgba(30, 64, 100, 0.55);
+        }
+
+        /* Kelompok kolom kedua */
+        col.second-group {
+            background-color: rgba(22, 163, 74, 0.22);
+        }
+
+        /* Kolom kelima */
+        col.highlight-column {
+            background-color: rgba(74, 222, 128, 0.15);
+        }
+
+        tbody tr {
+            transition: background-color 0.3s ease;
+        }
+
+        tbody tr:hover {
+            background-color: rgba(74, 222, 128, 0.12);
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(74, 222, 128, 0.15);
+            color: #4ade80;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .info {
+            margin-top: 25px;
+            padding: 18px;
+            border-left: 4px solid #4ade80;
+            background: rgba(74, 222, 128, 0.07);
+            border-radius: 8px;
+            color: #cbd5e1;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .info strong {
+            color: #4ade80;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #94a3b8;
+            font-size: 12px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 25px 12px;
+            }
+
+            .header h1 {
+                font-size: 26px;
+            }
+
+            .table-card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="header">
+            <h1>Colgroup Styling</h1>
+        </div>
+
+        <div class="table-card">
+
+            <table>
+                <caption>Data Mahasiswa</caption>
+
+                <!-- Mengatur kelompok kolom pertama -->
+                <colgroup span="3" class="first-group">
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+
+                <!-- Mengatur kelompok kolom kedua -->
+                <colgroup span="2" class="second-group">
+                    <col>
+                    <col>
+                </colgroup>
+
+                <thead>
+                    <tr>
+                        <th>NIM</th>
+                        <th>Nama Mahasiswa</th>
+                        <th>Jurusan</th>
+                        <th class="center">Nilai</th>
+                        <th class="center">Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>2401001</td>
+                        <td>Karlin</td>
+                        <td>Informatika</td>
+                        <td class="center">90</td>
+                        <td class="center">
+                            <span class="badge">Lulus</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2401002</td>
+                        <td>Jelvia</td>
+                        <td>Sistem Informasi</td>
+                        <td class="center">80</td>
+                        <td class="center">
+                            <span class="badge">Lulus</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2401003</td>
+                        <td>Andi</td>
+                        <td>Informatika</td>
+                        <td class="center">75</td>
+                        <td class="center">
+                            <span class="badge">Lulus</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2401004</td>
+                        <td>Siska</td>
+                        <td>Manajemen</td>
+                        <td class="center">65</td>
+                        <td class="center">Remedial</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info">
+                <strong>Keterangan:</strong><br>
+                • <strong>colgroup</strong> digunakan untuk mengelompokkan kolom tabel.<br>
+                • <strong>span="3"</strong> menunjukkan kelompok tiga kolom pertama.<br>
+                • <strong>CSS background-color</strong> memberikan warna berbeda pada setiap kelompok kolom.<br>
+                • Efek <strong>hover</strong> memberikan perubahan warna saat kursor diarahkan ke baris tabel.
+            </div>
+
+        </div>
+
+        <footer>
+            HTML &amp; CSS Practice | Modern Table Design
+        </footer>
+
+    </div>
+</body>
+</html>

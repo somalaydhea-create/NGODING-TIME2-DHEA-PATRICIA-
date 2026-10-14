@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML5 Details - Help</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            background: linear-gradient(135deg, #fff0f5, #f3e8ff, #ffe4e6);
+            color: #4a2948;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 650px;
+            padding: 38px;
+            background: rgba(255, 255, 255, 0.88);
+            border: 1px solid #f5cfe3;
+            border-radius: 24px;
+            box-shadow: 0 18px 45px rgba(147, 51, 105, 0.15);
+        }
+
+        .icon {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #f9a8d4, #c4b5fd);
+            border-radius: 22px;
+            font-size: 34px;
+            margin-bottom: 22px;
+            box-shadow: 0 8px 18px rgba(219, 112, 163, 0.2);
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #a21caf;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #80627c;
+            margin-bottom: 28px;
+        }
+
+        details {
+            background: #fff7fb;
+            border: 2px solid #f5cfe3;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        details[open] {
+            border-color: #d946a6;
+            box-shadow: 0 8px 24px rgba(217, 70, 166, 0.12);
+        }
+
+        summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 22px;
+            cursor: pointer;
+            list-style: none;
+            font-size: 18px;
+            font-weight: 700;
+            color: #a21caf;
+            transition: background 0.3s ease;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "+";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #fce7f3;
+            color: #be185d;
+            font-size: 22px;
+            transition: 0.3s ease;
+        }
+
+        details[open] summary::after {
+            content: "−";
+            background: #d946a6;
+            color: white;
+        }
+
+        summary:hover {
+            background: #fce7f3;
+        }
+
+        .answer {
+            padding: 0 22px 22px;
+            animation: appear 0.35s ease;
+        }
+
+        .answer p {
+            padding: 18px;
+            border-left: 4px solid #d946a6;
+            border-radius: 0 12px 12px 0;
+            background: #fdf2f8;
+            color: #704264;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .label {
+            display: inline-block;
+            padding: 7px 12px;
+            margin-bottom: 14px;
+            border-radius: 20px;
+            background: #f3e8ff;
+            color: #9333ea;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        footer {
+            margin-top: 28px;
+            text-align: center;
+            color: #a1819b;
+            font-size: 12px;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(-6px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                padding: 25px 20px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            summary {
+                padding: 17px;
+                font-size: 16px;
+            }
+
+            .answer {
+                padding: 0 15px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <div class="icon">💗</div>
+
+        <h1>Need Some Help?</h1>
+
+        <p class="subtitle">
+            Explore the help section below to learn more
+            about HTML5 and how its features work.
+        </p>
+
+        <span class="label">HTML5 GUIDE</span>
+
+        <details>
+            <summary>Help?</summary>
+
+            <div class="answer">
+                <p>
+                    This could give you help with HTML5 but we need
+                    more implementations to prove how things will work.
+                </p>
+            </div>
+        </details>
+
+        <footer>
+            Made with HTML5 &amp; CSS3
+        </footer>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aside Example</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 50px 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.96);
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #444;
+            margin: 0 0 25px;
+        }
+
+        aside {
+            margin: 30px 0;
+            padding: 25px 30px;
+            background: linear-gradient(135deg, #f5f7ff, #e8eaff);
+            border-left: 6px solid #667eea;
+            border-radius: 15px;
+            color: #555;
+            font-size: 16px;
+            line-height: 1.7;
+            font-style: italic;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+            position: relative;
+            transition: 0.3s ease;
+        }
+
+        aside::before {
+            content: "“";
+            position: absolute;
+            top: -15px;
+            left: 15px;
+            font-size: 55px;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        aside:hover {
+            transform: translateX(8px);
+            box-shadow: 0 12px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        aside::after {
+            content: "”";
+            position: absolute;
+            bottom: -35px;
+            right: 20px;
+            font-size: 55px;
+            color: #667eea;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <p>This is the main point I am trying to make.</p> 
+
+        <aside>
+            This is an aside I don't really know how important it is to make, 
+            but I love to make asides.
+        </aside> 
+
+        <p>Ok now back to the point I was making.</p>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML5 Audio Example</title>
+
+    <style>
+
+        /* ==============================
+           RESET
+        ============================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        /* ==============================
+           BODY
+        ============================== */
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    #6d5dfc,
+                    #33256d 45%,
+                    #100d24 100%
+                );
+
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 40px 20px;
+        }
+
+
+        /* ==============================
+           CONTAINER
+        ============================== */
+
+        .container {
+            width: 100%;
+            max-width: 850px;
+
+            padding: 40px;
+
+            background: rgba(255, 255, 255, 0.10);
+
+            border: 1px solid rgba(255, 255, 255, 0.20);
+
+            border-radius: 25px;
+
+            backdrop-filter: blur(15px);
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.35);
+
+            text-align: center;
+        }
+
+
+        /* ==============================
+           TITLE
+        ============================== */
+
+        h1 {
+            margin-top: 0;
+            margin-bottom: 10px;
+
+            font-size: 38px;
+
+            color: white;
+
+            text-shadow:
+                0 0 10px #a78bfa,
+                0 0 25px #7c3aed;
+        }
+
+
+        .description {
+            margin-bottom: 35px;
+
+            color: #ddd;
+
+            font-size: 16px;
+
+            line-height: 1.7;
+        }
+
+
+        /* ==============================
+           AUDIO CARD
+        ============================== */
+
+        .audio-card {
+            margin: 20px 0;
+
+            padding: 25px;
+
+            background: rgba(255, 255, 255, 0.12);
+
+            border-radius: 18px;
+
+            border: 1px solid rgba(255, 255, 255, 0.15);
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.20);
+
+            transition: 0.3s ease;
+        }
+
+
+        .audio-card:hover {
+            transform: translateY(-5px);
+
+            background: rgba(255, 255, 255, 0.16);
+
+            box-shadow:
+                0 15px 35px rgba(0, 0, 0, 0.30);
+        }
+
+
+        /* ==============================
+           AUDIO TITLE
+        ============================== */
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 15px;
+
+            font-size: 20px;
+
+            color: #e9d5ff;
+        }
+
+
+        /* ==============================
+           AUDIO PLAYER
+        ============================== */
+
+        audio {
+            width: 100%;
+
+            max-width: 600px;
+
+            margin-top: 10px;
+
+            border-radius: 30px;
+        }
+
+
+        /* ==============================
+           FALLBACK TEXT
+        ============================== */
+
+        audio p {
+            color: #ffdddd;
+
+            font-size: 14px;
+
+            margin: 10px 0;
+        }
+
+
+        code {
+            color: #f0abfc;
+
+            background: rgba(0, 0, 0, 0.25);
+
+            padding: 3px 7px;
+
+            border-radius: 5px;
+
+            font-family: Consolas, monospace;
+        }
+
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        .note {
+            margin-top: 30px;
+
+            padding: 15px;
+
+            background: rgba(0, 0, 0, 0.20);
+
+            border-radius: 12px;
+
+            color: #ddd;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+
+        /* ==============================
+           RESPONSIVE
+        ============================== */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 20px 10px;
+            }
+
+            .container {
+                padding: 25px 18px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .audio-card {
+                padding: 20px 15px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <h1>🎵 HTML5 Audio</h1>
+
+        <p class="description">
+            Examples of using the HTML5
+            <code>audio</code>
+            element.
+        </p>
+
+
+        <!-- =================================
+             AUDIO 1
+        ================================== -->
+
+        <div class="audio-card">
+
+            <h2>🎧 Autoplay Audio</h2>
+
+            <audio src="video.mp3" controls>
+</audio>
+
+                <p>No support for HTML5 <code>audio</code> element.</p>
+        </div>
+
+
+        <!-- =================================
+             AUDIO 2
+        ================================== -->
+
+        <div class="audio-card">
+
+            <h2>🔁 Loop & Controls</h2>
+
+        <audio src="cding.mp3" controls>
+</audio>
+                <p>No support for HTML5 <code>audio</code> element.</p>
+            </audio>
+
+        </div>
+
+
+        <!-- =================================
+             AUDIO 3
+        ================================== -->
+
+        <div class="audio-card">
+
+            <h2>🎶 Multiple Audio Sources</h2>
+
+            <audio id="audio3">
+
+                <source src="music.ogg" type="audio/ogg">
+
+                <source src="music.mp3">
+
+                <p>No support for HTML5 <code>audio</code> element.</p>
+
+            </audio>
+
+        </div>
+
+
+        <!-- =================================
+             IE AUDIO TRICK
+        ================================== -->
+
+        <div class="audio-card">
+
+            <h2>🔊 WAV Audio</h2>
+
+            <!-- Trick to make sound in IE browsers -->
+
+            <audio src="music.wav">
+
+                <bgsound src="music.wav">
+
+            </audio>
+
+        </div>
+
+
+        <!-- =================================
+             NOTE
+        ================================== -->
+
+        <div class="note">
+
+            💡 Make sure that
+            <strong>music.ogg</strong>,
+            <strong>music.mp3</strong>,
+            and
+            <strong>music.wav</strong>
+            are in the same folder as this HTML file.
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Examples</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .container {
+            width: 85%;
+            max-width: 750px;
+            padding: 45px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .button-box {
+            margin: 20px 0;
+            padding: 30px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #f8f9ff, #eef1ff);
+            border: 1px solid #ddd;
+        }
+
+        button {
+            padding: 14px 28px;
+            border: none;
+            border-radius: 30px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* Tombol Submit */
+        button[type="Submit"] {
+            color: white;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        button[type="Submit"]:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(102, 126, 234, 0.5);
+        }
+
+        /* Tombol Click This Button */
+        button[onclick] {
+            color: white;
+            background: linear-gradient(135deg, #ff6a88, #ff99ac);
+            box-shadow: 0 8px 20px rgba(255, 106, 136, 0.35);
+        }
+
+        button[onclick]:hover {
+            transform: scale(1.05);
+        }
+
+        /* Tombol gambar */
+        .image-button {
+            width: 100px;
+            height: 70px;
+            padding: 8px;
+            background: white;
+            border: 3px solid #667eea;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .image-button:hover {
+            transform: rotate(-3deg) scale(1.08);
+            border-color: #ff6a88;
+        }
+
+        .image-button img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            margin: auto;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+    </style>
+
+    <script>
+        function doSomething() {
+            alert("Button clicked!");
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="button-box">
+            <button name="Submit"
+                    value="Submit"
+                    type="Submit">Submit Request</button>
+        </div>
+
+        <div class="button-box">
+            <button type="button"
+                    onclick="doSomething();">Click This Button</button>
+        </div>
+
+        <div class="button-box">
+    <button type="button" class="image-button">
+        <img src="giphy.gif" alt="Polkadot">
+    </button>
+</div>
+
+</body>
+</html>
