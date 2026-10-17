@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Definition List and Details</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #344e41, #588157, #dad7cd);
+        }
+
+        .page {
+            width: 100%;
+            max-width: 760px;
+            padding: 32px;
+            background: #fefcf5;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(25, 45, 30, 0.28);
+        }
+
+        dl, details, figure {
+            margin-bottom: 24px;
+            padding: 24px;
+            background: #ffffff;
+            border: 1px solid #dce5d6;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(52, 78, 65, 0.08);
+        }
+
+        dt {
+            margin-bottom: 10px;
+            color: #344e41;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        dd {
+            margin: 0 0 20px 14px;
+            padding: 12px 16px;
+            color: #4f5d50;
+            background: #f1f5ed;
+            border-left: 4px solid #7a9e7e;
+            border-radius: 0 9px 9px 0;
+            line-height: 1.7;
+        }
+
+        dd:last-child {
+            margin-bottom: 0;
+        }
+
+        details dt {
+            padding: 12px 16px;
+            color: #ffffff;
+            background: #588157;
+            border-radius: 9px;
+        }
+
+        figure {
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        figure dt {
+            padding: 12px;
+            color: #ffffff;
+            background: #8b6f47;
+            border-radius: 10px;
+        }
+
+        figure img {
+            display: block;
+            width: 150px;
+            height: 320px;
+            max-width: 100%;
+            object-fit: cover;
+            margin: 15px auto;
+            border: 5px solid #e5e1d5;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(40, 50, 35, 0.18);
+        }
+
+        figure p {
+            color: #657565;
+            font-size: 14px;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 520px) {
+            .page {
+                padding: 18px;
+            }
+
+            dl, details, figure {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page">
+
+        <!-- Typical definition list usage -->
+        <dl>
+            <dt>Vole</dt>
+            <dd>Small creature related to the weasel</dd>
+
+            <dt>Weasel</dt>
+            <dd>Small creature related to the vole</dd>
+        </dl>
+
+        <!-- HTML5 examples -->
+        <details>
+            <summary>Important Notes</summary>
+            <p>This tag seems to be reused too much under HTML5!</p>
+        </details>
+
+        <figure>
+            <figcaption>Moose Baby!</figcaption>
+            <img src="desmond baby.jpg" alt="Desmond Baby" height="320" width="150">
+            <p>A photo of Desmond circa 2010.</p>
+        </figure>
+
+    </main>
+</body>
+</html>

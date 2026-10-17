@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Description List Example</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #123c50, #287b83, #f2a98b);
+        }
+
+        .page {
+            width: 100%;
+            max-width: 800px;
+            padding: 35px;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(10, 35, 50, 0.3);
+        }
+
+        dl {
+            padding: 22px;
+            margin-bottom: 25px;
+            background: #f4f9fa;
+            border: 1px solid #d9e9eb;
+            border-radius: 16px;
+        }
+
+        dt {
+            margin-top: 14px;
+            padding: 12px 16px;
+            color: #ffffff;
+            background: linear-gradient(100deg, #176b78, #279ba0);
+            border-radius: 9px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(23, 107, 120, 0.12);
+        }
+
+        dt:first-child {
+            margin-top: 0;
+        }
+
+        dd {
+            margin: 10px 0 18px 18px;
+            padding: 12px 15px;
+            color: #38545c;
+            background: #ffffff;
+            border-left: 4px solid #f29a79;
+            border-radius: 0 8px 8px 0;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        dt:hover {
+            background: linear-gradient(100deg, #d96f56, #f29a79);
+            transition: 0.3s ease;
+        }
+
+        dd:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 600px) {
+            .page {
+                padding: 18px;
+            }
+
+            dl {
+                padding: 15px;
+            }
+
+            dt {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page">
+
+        <dl>
+            <dt>Cat</dt>
+            <dd>A domestic animal that likes fish.</dd>
+
+            <dt>Skunk</dt>
+            <dd>A wild animal that needs deodorant.</dd>
+        </dl>
+
+        <!-- Terms definitions don't have to pair match -->
+        <dl>
+            <dt>Cat</dt>
+            <dt>Fritz</dt>
+            <dt>Sylvester</dt>
+            <dd>A domestic animal that likes fish.</dd>
+
+            <dt>Skunk</dt>
+            <dt>Pepe Le Pew</dt>
+            <dd>A wild animal that needs deodorant.</dd>
+
+            <dt>Tasmanian Devil</dt>
+        </dl>
+
+    </main>
+</body>
+</html>
