@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hello CSS World</title>
+
+    <style>
+        /* Modern CSS Style Sheet */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1b102b, #302044, #130d1c);
+            color: #f5efff;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 50px 25px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(216, 180, 254, 0.25);
+            border-radius: 22px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #d8b4fe;
+            font-size: clamp(28px, 5vw, 42px);
+            text-align: center;
+            margin-bottom: 25px;
+            text-shadow: 0 0 20px rgba(216, 180, 254, 0.3);
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #c084fc, #fbbf24, transparent);
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 2;
+            margin-bottom: 20px;
+            color: #e9dff5;
+        }
+
+        /* Highlighted text */
+        .fancy {
+            background: linear-gradient(135deg, #fbbf24, #fde68a);
+            color: #38220a;
+            font-weight: bold;
+            padding: 4px 9px;
+            border-radius: 6px;
+            box-shadow: 0 3px 10px rgba(251, 191, 36, 0.12);
+        }
+
+        /* Heart symbol */
+        #heart {
+            display: inline-block;
+            color: #fb7185;
+            font-size: 32px;
+            text-shadow: 0 0 12px rgba(251, 113, 133, 0.6);
+            animation: heartbeat 1.2s infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            15% {
+                transform: scale(1.25);
+            }
+
+            30% {
+                transform: scale(1);
+            }
+
+            45% {
+                transform: scale(1.18);
+            }
+
+            60% {
+                transform: scale(1);
+            }
+        }
+
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(216, 180, 254, 0.2);
+            color: #bdaacb;
+            font-size: 12px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 25px 15px;
+            }
+
+            .container {
+                padding: 25px 20px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>Welcome to the World of CSS</h1>
+
+        <hr>
+
+        <p>
+            CSS <em class="fancy">really</em> isn't so hard either!
+        </p>
+
+        <p>
+            Soon you will also <span id="heart">&hearts;</span>
+            using CSS.
+        </p>
+
+        <p>
+            You can put lots of text here if you want.
+            We could go on and on with <span class="fancy">fake</span>
+            text for you to read, but let's get back to the book.
+        </p>
+
+        <div class="footer">
+            HELLO CSS WORLD | HTML &amp; CSS PRACTICE
+        </div>
+
+    </main>
+
+</body>
+</html>

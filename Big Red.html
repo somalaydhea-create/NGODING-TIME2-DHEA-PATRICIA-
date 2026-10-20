@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Big Red HTML Text</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #211c17, #403126, #171412);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 950px;
+            text-align: center;
+        }
+
+        .heading {
+            color: #f5e6d3;
+            font-size: 15px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        .text-card {
+            width: 100%;
+            background: #ffeb3b;
+            border: 5px solid #f59e0b;
+            border-radius: 20px;
+            padding: 65px 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        .text-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 22px 45px rgba(245, 158, 11, 0.2);
+        }
+
+        .text-card h1 {
+            color: #e00000;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: clamp(30px, 6vw, 64px);
+            font-weight: 900;
+            line-height: 1.2;
+            text-shadow: 2px 3px 0 rgba(128, 0, 0, 0.12);
+        }
+
+        .description {
+            color: #d6c6b3;
+            margin-top: 25px;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .tag {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 9px 16px;
+            background: #f59e0b;
+            color: #211c17;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 500px) {
+            .text-card {
+                padding: 45px 15px;
+            }
+
+            .heading {
+                font-size: 12px;
+                letter-spacing: 2px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <p class="heading">HTML Text Styling Example</p>
+
+        <table width="100%" class="text-table">
+            <tbody>
+                <tr>
+                    <td class="text-cell">
+                        <div class="text-card">
+                            <h1>Big Red HTML Text</h1>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="description">
+            A classic HTML text example recreated using modern CSS.
+        </p>
+
+        <span class="tag">HTML5 + CSS3</span>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>CSS Validation Challenges</title>
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #241332, #512b58, #a2678a);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px;
+    }
+
+    p {
+        width: 100%;
+        max-width: 650px;
+        padding: 25px;
+        border-radius: 14px;
+        background: #fff8fc;
+        color: #49304a;
+        font-size: 18px;
+        line-height: 1.7;
+        box-shadow: 0 10px 25px rgba(20, 10, 30, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    p:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(20, 10, 30, 0.3);
+    }
+
+    #unique {
+        color: #d4145a;
+        font-size: xx-large;
+        font-weight: bold;
+        background: linear-gradient(135deg, #fff0f5, #fce4ec);
+        border-left: 6px solid #d4145a;
+    }
+
+    @media (max-width: 500px) {
+        body {
+            padding: 18px;
+        }
+
+        p {
+            padding: 18px;
+            font-size: 16px;
+        }
+
+        #unique {
+            font-size: 24px;
+        }
+    }
+</style>
+</head>
+<body>
+<p id="unique">I am the paragraph with id unique.</p>
+<p>I am not the unique paragraph.</p>
+<p id="unique">Yet another unique paragraph?</p>
+</body>
+</html>
