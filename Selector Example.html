@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Id Selector Example</title>
+
+<style type="text/css" media="all">
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+        padding: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #101c18, #203d30, #356b4d);
+    }
+
+    p {
+        width: 100%;
+        max-width: 600px;
+        padding: 22px 25px;
+        color: #eaf5ee;
+        background: #1d2923;
+        border: 1px solid #42614e;
+        border-radius: 14px;
+        font-size: 18px;
+        line-height: 1.6;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        transition: 0.3s ease;
+    }
+
+    #p2 {
+        background-color: green;
+        color: white;
+        border: 2px solid #a4f5b5;
+        box-shadow: 0 0 22px rgba(0, 255, 100, 0.25);
+        font-weight: bold;
+    }
+
+    p:hover {
+        transform: translateY(-4px);
+        border-color: #83d6a0;
+    }
+
+    @media (max-width: 480px) {
+        p {
+            padding: 18px;
+            font-size: 16px;
+        }
+    }
+</style>
+</head>
+
+<body>
+<p>This is the first paragraph.</p>
+<p id="p2">This is the second paragraph.</p>
+<p>This is the third paragraph.</p>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Class Selector Example</title>
+
+<style type="text/css" media="all">
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #352044, #754778, #e8b4c8);
+    }
+
+    h1,
+    p {
+        width: 100%;
+        max-width: 650px;
+        padding: 22px 25px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(40, 15, 45, 0.15);
+        transition: all 0.3s ease;
+    }
+
+    h1 {
+        color: #60345f;
+        font-size: 36px;
+        text-align: center;
+    }
+
+    p {
+        color: #493c4d;
+        background: #fffaf5;
+        font-size: 18px;
+        line-height: 1.6;
+        border: 1px solid #ead8e8;
+    }
+
+    .veryimportant {
+        background-color: yellow;
+    }
+
+    h1.veryimportant {
+        background: linear-gradient(135deg, #fff2a8, #ffe16b);
+        border: 2px solid #e6bf38;
+    }
+
+    p.veryimportant {
+        background: linear-gradient(135deg, #fff5b8, #ffe987);
+        border-left: 6px solid #d6a900;
+    }
+
+    h1:hover,
+    p:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 14px 30px rgba(40, 15, 45, 0.22);
+    }
+
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 29px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        h1,
+        p {
+            padding: 18px;
+        }
+    }
+</style>
+</head>
+
+<body>
+<h1 class="veryimportant">Example</h1>
+<p class="veryimportant">This is the first paragraph.</p>
+<p>This is the second paragraph.</p>
+<p class="veryimportant">This is the third paragraph.</p>
+</body>
+</html>

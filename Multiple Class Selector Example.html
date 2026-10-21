@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Multiple Class Selector Example</title>
+<style type="text/css" media="all">
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        padding: 40px 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #32121f, #672c3b, #a66b55);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    h1, p {
+        width: 100%;
+        max-width: 850px;
+        margin: 0;
+        padding: 24px 28px;
+        border-radius: 14px;
+        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+        line-height: 1.7;
+    }
+
+    .heading {
+        font-family: Impact, Sans-Serif;
+    }
+
+    .veryimportant {
+        background: linear-gradient(135deg, #fff0b8, #f5d77e);
+        border-left: 7px solid #d19a26;
+    }
+
+    .stuff {
+        color: #a51d35;
+    }
+
+    .veryimportant.stuff {
+        font-style: italic;
+    }
+
+    .veryimportant.example.stuff {
+        text-decoration: underline;
+        text-decoration-color: #a51d35;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 5px;
+    }
+
+    h1.veryimportant {
+        font-size: clamp(23px, 4vw, 32px);
+        text-align: center;
+        letter-spacing: 0.5px;
+    }
+
+    p {
+        background: #fffaf3;
+        color: #41323a;
+        font-size: 17px;
+        border: 1px solid rgba(255, 240, 220, 0.65);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    p:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 26px rgba(0, 0, 0, 0.25);
+    }
+
+    @media (max-width: 500px) {
+        body {
+            padding: 22px 14px;
+        }
+
+        h1, p {
+            padding: 18px;
+            font-size: 16px;
+        }
+    }
+</style>
+</head>
+<body>
+<h1 class="veryimportant heading stuff">Heading (yellow background, red
+text, italic, and Impact)</h1>
+<p class="veryimportant">This is the first paragraph. (yellow background,
+black text)</p>
+<p class="stuff">This is the second paragraph. (red text, default
+background)</p>
+<p class="veryimportant stuff">This is the third paragraph.
+(yellow background, red text, italic)</p>
+<p class="stuff veryimportant example dummy">This is the fourth paragraph.
+(yellow background, red text, italic, underlined)</p>
+</body>
+</html>

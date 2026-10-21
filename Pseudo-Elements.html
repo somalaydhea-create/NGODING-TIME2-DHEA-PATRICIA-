@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>First Letter and First Line Pseudo-Elements</title>
+<style type="text/css" media="all">
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        padding: 40px 20px;
+        font-family: Georgia, "Times New Roman", serif;
+        background: linear-gradient(135deg, #12372a, #1f5943, #a8b99a);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #intro {
+        width: 100%;
+        max-width: 950px;
+        margin: 0;
+        padding: 50px;
+        background: #fffaf0;
+        color: #39483b;
+        border: 1px solid #d8c69a;
+        border-radius: 18px;
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+        font-size: 18px;
+        line-height: 1.9;
+        text-align: justify;
+    }
+
+    p#intro:first-letter {
+        font-size: 5em;
+        font-weight: bold;
+        float: left;
+        margin-right: .1em;
+        color: #b28a35;
+        line-height: 0.9;
+        text-shadow: 2px 3px 0 #ead9a6;
+    }
+
+    p#intro:first-line {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #1f5943;
+    }
+
+    @media (max-width: 600px) {
+        body {
+            padding: 20px 14px;
+        }
+
+        #intro {
+            padding: 25px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        p#intro:first-line {
+            font-size: 1.2em;
+        }
+    }
+</style>
+</head>
+<body>
+<p id="intro">It was the best of times, it was the worst of times, it was
+the age of wisdom, it was the age of foolishness, it was the epoch of
+belief, it was the epoch of incredulity, it was the season of Light, it was
+the season of Darkness, it was the spring of hope, it was the winter of
+despair, we had everything before us, we had nothing before us, we were all
+going direct to heaven, we were all going direct the other way - in short,
+the period was so far like the present period, that some of its noisiest
+authorities insisted on its being received, for good or for evil, in the
+superlative degree of comparison only.</p>
+</body>
+</html>
