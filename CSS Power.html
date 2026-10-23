@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>CSS Power!</title>
+
+<style type="text/css" media="screen">
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        font-family: Georgia, "Times New Roman", serif;
+        background: linear-gradient(135deg, #321b24, #713b45, #c18c78);
+    }
+
+    .boxed {
+        width: 100%;
+        max-width: 1100px;
+        padding: 38px;
+        background: #fff8ef;
+        border: 1px solid #e5c9b8;
+        box-shadow: 0 25px 60px rgba(30, 10, 15, 0.3);
+    }
+
+    .rounded {
+        border-radius: 24px;
+    }
+
+    h1 {
+        margin-bottom: 28px;
+        padding-bottom: 18px;
+        color: #713b45;
+        font-size: clamp(30px, 5vw, 46px);
+        text-align: center;
+        border-bottom: 3px solid #c18c78;
+        letter-spacing: 1px;
+    }
+
+    .three-columns {
+        column-count: 3;
+        column-gap: 30px;
+        column-rule: 1px solid #dfc5b6;
+    }
+
+    .three-columns p {
+        color: #49363a;
+        font-size: 16px;
+        line-height: 1.9;
+        text-align: justify;
+        overflow-wrap: break-word;
+    }
+
+    @media (max-width: 800px) {
+        .three-columns {
+            column-count: 2;
+        }
+
+        .boxed {
+            padding: 28px;
+        }
+    }
+
+    @media (max-width: 550px) {
+        body {
+            padding: 15px;
+        }
+
+        .boxed {
+            padding: 22px;
+        }
+
+        .three-columns {
+            column-count: 1;
+        }
+
+        .three-columns p {
+            font-size: 15px;
+        }
+    }
+</style>
+</head>
+
+<body>
+<div class="boxed rounded">
+<h1>CSS is Powerful!</h1>
+<div class="three-columns">
+ <p>It was the best of times, it was the worst of times, it was the age of
+wisdom, it was the age of foolishness, it was the epoch of belief, it was
+the epoch of incredulity, it was the season of Light, it was the season of
+Darkness, it was the spring of hope, it was the winter of despair, we had
+everything before us, we had nothing before us, we were all going direct to
+Heaven, we were all going direct the other way--in short, the period was so
+far like the present period, that some of its noisiest authorities insisted
+on its being received, for good or for evil, in the superlative degree of
+comparison only.</p>
+ </div>
+</div>
+</body>
+</html>

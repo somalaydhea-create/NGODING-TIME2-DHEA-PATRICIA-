@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>White-space Property</title>
+
+<style type="text/css" media="all">
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        padding: 35px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 22px;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #3b2522, #8c5142, #e5b99f);
+    }
+
+    p {
+        width: 100%;
+        max-width: 750px;
+        padding: 24px;
+        color: #50372e;
+        background: #fffaf3;
+        border: 1px solid #e8d4c4;
+        border-left: 6px solid #bd7655;
+        border-radius: 14px;
+        box-shadow: 0 10px 25px rgba(45, 24, 18, 0.16);
+        font-size: 17px;
+        line-height: 1.8;
+        transition: 0.3s ease;
+    }
+
+    p:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 30px rgba(45, 24, 18, 0.24);
+    }
+
+    p.pre {
+        white-space: pre;
+        background: #f7e8d8;
+        border-left-color: #d49a36;
+        font-family: "Courier New", monospace;
+        overflow-x: auto;
+    }
+
+    p.nowrap {
+        white-space: nowrap;
+        background: #f0d9d0;
+        border-left-color: #a64b3c;
+        overflow-x: auto;
+    }
+
+    @media (max-width: 600px) {
+        p {
+            padding: 18px;
+            font-size: 15px;
+        }
+    }
+</style>
+</head>
+
+<body>
+<p>This is a standard paragraph
+ notice
+ that white
+ space
+ is not preserved.</p>
+
+<p class="pre">This paragraph
+ had
+ it's white-space
+ rules adjusted to
+ act
+ like a
+ pre element.</p>
+
+<p class="nowrap">This very long paragraph really ought to wrap but
+it doesn't because the nowrap value has been set for the white-space
+property.</p>
+</body>
+</html>
