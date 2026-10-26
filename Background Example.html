@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Background Example</title>
+
+<style type="text/css">
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        padding: 30px;
+        font-family: Arial, sans-serif;
+        color: #333333;
+        background: white url(picture.gif) repeat-y center;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 850px;
+        min-height: 500px;
+        margin: 0 auto;
+        padding: 35px;
+        background-color: rgba(255, 255, 255, 0.94);
+        border: 1px solid #e2caca;
+        border-radius: 18px;
+        box-shadow: 0 15px 40px rgba(80, 20, 30, 0.15);
+    }
+
+    h1 {
+        margin-top: 0;
+        padding-bottom: 15px;
+        color: #8f2635;
+        text-align: center;
+        border-bottom: 3px solid #c96b78;
+    }
+
+    .red {
+        background: #ff0000;
+        padding: 20px;
+        margin: 20px 0;
+        color: white;
+        border-radius: 10px;
+        font-weight: bold;
+        box-shadow: 0 6px 15px rgba(255, 0, 0, 0.15);
+    }
+
+    #div1 {
+        background: white url(logo.gif) no-repeat fixed 10px 10px;
+        min-height: 180px;
+        padding: 25px;
+        margin-top: 20px;
+        border: 2px solid #d8b8bd;
+        border-radius: 12px;
+        line-height: 1.8;
+    }
+
+    @media (max-width: 600px) {
+        body {
+            padding: 15px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+    }
+</style>
+</head>
+
+<body>
+<div class="container">
+    <h1>Background Example</h1>
+
+    <div class="red">
+        .red {background: #ff0000;}
+    </div>
+
+    <div id="div1">
+        #div1 {background: white url(logo.gif) no-repeat fixed 10px 10px;}
+    </div>
+</div>
+</body>
+</html>

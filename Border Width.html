@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Border Width</title>
+
+<style type="text/css">
+    body {
+        margin: 0;
+        min-height: 100vh;
+        padding: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #243b36, #52796f, #cad2c5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 750px;
+        padding: 35px;
+        background: #fffdf5;
+        border-radius: 18px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    div {border-width: medium;}
+    /* all sides set medium */
+    #d1 {border-width: 10px 5px;}
+    /* 10px top-bottom, 5px right and left */
+    #fun {border-width: 10px 1px 4px 50px;}
+    /* sides set individually */
+
+    .box {
+        border-style: solid;
+        border-color: #52796f;
+        background: #f0f5ed;
+        min-height: 80px;
+        margin: 25px 0;
+        padding: 20px;
+        border-radius: 5px;
+        color: #243b36;
+        font-size: 17px;
+    }
+
+    #d1 {
+        border-color: #d97757;
+        background: #fff0e8;
+    }
+
+    #fun {
+        border-color: #76528b;
+        background: #f4edfa;
+    }
+
+    @media (max-width: 500px) {
+        body {
+            padding: 16px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+    }
+</style>
+</head>
+
+<body>
+<div class="container">
+    <div class="box">All sides set medium</div>
+    <div class="box" id="d1">10px top-bottom, 5px right and left</div>
+    <div class="box" id="fun">Sides set individually</div>
+</div>
+</body>
+</html>

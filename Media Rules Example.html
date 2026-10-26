@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Media Rules Example</title>
+
+<style type="text/css">
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 35px;
+    background: #e7f2ef;
+    color: #263b38;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 35px;
+    background: #fffdf6;
+    border: 1px solid #c6ded8;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(28, 78, 68, 0.12);
+}
+
+h1 {
+    color: #176b61;
+    margin-top: 0;
+}
+
+.example {
+    margin: 20px 0;
+    padding: 20px;
+    background: #f0f7f4;
+    border-left: 5px solid #249688;
+    border-radius: 8px;
+    line-height: 1.8;
+}
+
+code {
+    color: #176b61;
+    font-family: Consolas, monospace;
+}
+
+/* Original media examples */
+@media screen {
+    /* screen rules */
+}
+
+@media print {
+    /* print rules */
+}
+
+@media screen, print {
+    /* screen and print rules */
+}
+
+/* Original example: screen styles */
+@media screen {
+    body {
+        font-family: sans-serif;
+        font-size: 14px;
+    }
+}
+
+/* Original example: print styles */
+@media print {
+    body {
+        font-family: serif;
+        font-size: 10px;
+    }
+}
+
+/* Additional screen styling */
+@media screen {
+    body {
+        background: #e7f2ef;
+    }
+
+    .container {
+        border-top: 5px solid #249688;
+    }
+}
+
+/* Additional print styling */
+@media print {
+    body {
+        padding: 0;
+        background: white;
+        color: black;
+    }
+
+    .container {
+        max-width: none;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background: white;
+    }
+
+    .example {
+        background: white;
+        border: 1px solid #999;
+        color: black;
+    }
+
+    h1 {
+        color: black;
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+    <h1>Media Rules Example</h1>
+
+    <div class="example">
+        <style type="text/css">
+        @media screen { /* screen rules */ }
+        @media print { /* print rules */ }
+        @media screen, print { /* screen and print rules */ }
+        </style>
+        The syntax may look a little odd because you have to wrap style blocks with more curly
+        braces, like so:
+        <style type="text/css">
+        @media screen {body
+         {font-family: sans-serif;
+         font-size: 14px;}
+         }
+        @media print {body
+         {font-family: serif;
+         font-size: 10px;}
+         }
+        </style>
+    </div>
+
+</div>
+</body>
+</html>

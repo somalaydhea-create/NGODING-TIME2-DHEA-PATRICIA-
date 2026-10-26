@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Background Attachment</title>
+
+<style type="text/css">
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        min-height: 150vh;
+        padding: 30px;
+        font-family: Arial, sans-serif;
+        color: #263b30;
+        background-color: #e8efe5;
+        background-image: url(tile.gif);
+        background-attachment: scroll;
+    }
+
+    .container {
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 30px;
+        background: rgba(255, 253, 245, 0.96);
+        border: 1px solid #cbd9c5;
+        border-radius: 20px;
+        box-shadow: 0 12px 35px rgba(38, 59, 48, 0.15);
+    }
+
+    h1 {
+        color: #426b50;
+        text-align: center;
+        margin-top: 0;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #b7cbb0;
+    }
+
+    #logo {
+        min-height: 220px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+        background-color: #dce8d5;
+        background-image: url(logo.gif);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 2px dashed #8da98a;
+        border-radius: 14px;
+        overflow: hidden;
+    }
+
+    @media print {
+        body {
+            min-height: auto;
+            padding: 0;
+            background: white;
+        }
+
+        .container {
+            box-shadow: none;
+            border: none;
+        }
+    }
+</style>
+</head>
+
+<body>
+<div class="container">
+    <h1>Background Attachment</h1>
+
+    <div id="Logo"></div>
+</div>
+</body>
+</html>

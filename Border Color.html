@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Border Color</title>
+
+<style type="text/css">
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        padding: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #30203d, #694873, #c8a2c8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 750px;
+        padding: 40px;
+        background: #fffaff;
+        border-radius: 20px;
+        box-shadow: 0 20px 45px rgba(30, 10, 40, 0.3);
+    }
+
+    p {
+        border-style: solid;
+        border-width: thin;
+        border-top-color: #f00;
+        min-height: 130px;
+        padding: 30px;
+        margin: 0;
+        background: #f5efff;
+        border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(105, 72, 115, 0.12);
+    }
+
+    @media (max-width: 500px) {
+        body {
+            padding: 18px;
+        }
+
+        .container {
+            padding: 22px;
+        }
+    }
+</style>
+</head>
+
+<body>
+<div class="container">
+    <p></p>
+</div>
+</body>
+</html>
