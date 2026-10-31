@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Counter Reset</title>
+
+    <style type="text/css">
+        div.chapter {
+            counter-reset: section;
+        }
+        /* Set section to 0 */
+
+        ol {
+            counter-reset: sectioncount listcount x y;
+        }
+        /* Sets four counters to 0 */
+
+        #foo {
+            counter-reset: globalCount 5;
+        }
+        /* set to 5 for some reason */
+    </style>
+</head>
+
+<body>
+
+    <div class="chapter">
+        <h2>Chapter One</h2>
+        <p>Introduction to CSS Counters</p>
+    </div>
+
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <div id="foo">
+        <h2>CSS Counter Example</h2>
+        <p>This section uses a counter reset value of 5.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Example</title>
+
+    <style>
+        #div1 {position: absolute; left: 100px; bottom: 150px;}
+        #div2 {position: absolute; left: 50%; bottom: 30%;}
+        #div3 {position: absolute; left: 10px; bottom: auto; top: 500px;}
+        /* bottom will evaluate to a position calculated off the top position */
+        #footer {position: fixed; left: 0; bottom: 0;}
+    </style>
+</head>
+<body>
+
+    <div id="div1">
+        <h2>First Box</h2>
+        <p>This is the first positioned element.</p>
+    </div>
+
+    <div id="div2">
+        <h2>Second Box</h2>
+        <p>This is the second positioned element.</p>
+    </div>
+
+    <div id="div3">
+        <h2>Third Box</h2>
+        <p>This is the third positioned element.</p>
+    </div>
+
+    <div id="footer">
+        <p>Footer Section</p>
+    </div>
+
+</body>
+</html>

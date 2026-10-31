@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Empty Cells</title>
+
+<style type="text/css">
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        padding: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #493323, #806044, #d6b98c);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 35px;
+        flex-wrap: wrap;
+    }
+
+    table {
+        border-collapse: separate;
+        border-spacing: 5px;
+        width: 280px !important;
+        background: #fffaf0;
+        border: 2px solid #b68b55;
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    caption {
+        caption-side: top;
+        padding: 15px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #fffaf0;
+        background: #765334;
+        border-radius: 8px;
+        margin-bottom: 12px;
+    }
+
+    td {
+        height: 65px;
+        padding: 12px;
+        border: 1px solid #b68b55;
+        background: #f3e5cc;
+        color: #493323;
+        font-size: 16px;
+    }
+
+    table:first-of-type {
+        empty-cells: show;
+    }
+
+    table:last-of-type {
+        empty-cells: hide;
+    }
+</style>
+</head>
+
+<body>
+
+<table border="1" style="empty-cells:show; width: 80px;">
+
+<caption>Show Cells</caption>
+
+<tr>
+
+ <td colspan="2">Cell 1</td>
+
+</tr>
+
+ <tr>
+
+ <td>Cell 2</td>
+
+ <td></td>
+
+ </tr>
+
+</table>
+
+<table border="1" style="empty-cells:hide; width: 80px;">
+
+<caption>Hide Cells</caption>
+
+ <tr>
+
+ <td colspan="2">Cell 1</td>
+
+ </tr>
+
+ <tr>
+
+ <td>Cell 2</td>
+
+ <td></td>
+
+ </tr>
+
+</table>
+
+</body>
+</html>

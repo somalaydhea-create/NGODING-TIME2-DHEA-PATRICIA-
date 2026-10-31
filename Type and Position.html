@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>List Style Type and Position</title>
+
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 40px;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #42275a, #734b6d, #c9a0a0);
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: auto;
+            padding: 30px;
+            background: #fffaf5;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            color: #633b58;
+            text-align: center;
+        }
+
+        ol {list-style-type: upper-roman; list-style-position: outside;
+            background: rgb(247, 5, 210);}
+
+        ul {list-style-type: square; list-style-position: inside;
+            background: rgb(247, 5, 210);}
+
+        li {
+            padding: 10px;
+            margin: 8px 0;
+            color: #493447;
+            font-size: 18px;
+        }
+
+        .list-box {
+            margin-top: 25px;
+            padding: 15px;
+            background: #f3e5ef;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Ordered List</h2>
+        <div class="list-box">
+            <ol>
+                <li>Belajar HTML</li>
+                <li>Belajar CSS</li>
+                <li>Belajar JavaScript</li>
+                <li>Membuat Website</li>
+            </ol>
+        </div>
+
+        <h2>Unordered List</h2>
+        <div class="list-box">
+            <ul>
+                <li>Apel</li>
+                <li>Jeruk</li>
+                <li>Mangga</li>
+                <li>Anggur</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Font Family</title>
+
+<style type="text/css">
+    body {
+        margin: 0;
+        min-height: 100vh;
+        padding: 35px;
+        background: linear-gradient(135deg, #302b27, #6b5948, #c4a77d);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 800px;
+        padding: 35px;
+        background: #fffaf0;
+        border-radius: 18px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .modern {
+        font-family:'Trebuchet MS', Arial, Helvetica, sans-serif;
+    }
+
+    p {
+        font-family: Serif;
+    }
+
+    body {
+        font-family: "Times New Roman, Courier";
+    }
+
+    #special {
+        font-family: fantasy;
+    }
+
+    .sample {
+        padding: 20px;
+        margin: 20px 0;
+        background: #f4ead8;
+        border-left: 5px solid #a47b50;
+        border-radius: 8px;
+        color: #44352a;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+</style>
+</head>
+
+<body>
+<div class="container">
+
+    <div class="sample modern">
+        <p>This text uses Trebuchet MS, Arial, Helvetica, sans-serif.</p>
+    </div>
+
+    <div class="sample">
+        <p>This text uses Serif font.</p>
+    </div>
+
+    <div class="sample">
+        This text uses the body font family.
+    </div>
+
+    <div class="sample">
+        <p id="special">This text uses Fantasy font.</p>
+    </div>
+
+</div>
+</body>
+</html>
