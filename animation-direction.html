@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>CSS Animations - animation-direction</title>
+
+<style type="text/css">
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #42275a, #734b6d, #c9a0a0);
+    overflow: hidden;
+}
+
+@-webkit-keyframes resize {
+from {width: 100px; height: 300px;
+ left: 0; top: 0;}
+50% {width: 100px; height: 100px;
+ left: 300px; top: 0;}
+to {width: 300px;height: 100px;
+ left: 300px; top: 300px;}
+}
+
+#anim1 {-webkit-animation-name:resize;
+ -webkit-animation-duration: 4s;
+ -webkit-animation-iteration-count: 5;
+ -webkit-animation-direction: alternate;
+ position:absolute;
+ background-color: purple;}
+
+#anim1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #8e44ad, #d980fa);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+
+<body>
+<div id="anim1">Watch me move and change size!</div>
+</body>
+</html>

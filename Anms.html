@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>CSS Animations</title>
+
+<style type="text/css">
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1d4350, #a43931);
+    overflow: hidden;
+}
+
+@-webkit-keyframes move {
+ from {left: 0; top: 0;}
+ 50% {left: 500px; top: 0;}
+ to {left: 500px; top: 500px;}
+}
+
+#anim1 {-webkit-animation:move 5s ease-out 0 infinite alternate;
+ position:absolute;
+ height: 100px; width: 100px;
+ background-color: purple;}
+
+#anim1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+
+<body>
+<div id="anim1">Watch me move!</div>
+</body>
+</html>

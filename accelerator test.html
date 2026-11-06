@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>accelerator Test</title>
+
+    <style type="text/css" media="screen">
+        .accelerator {
+            -ms-accelerator: true;
+            accelerator: true;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="login.php" method="post">
+
+        <div>
+            <label>
+                U<span class="accelerator">s</span>ername:
+                <input type="text" name="username" id="username" accesskey="s">
+            </label>
+        </div>
+
+        <div>
+            <label>
+                <span class="accelerator">P</span>assword:
+                <input type="password" name="userpass" id="userpass" accesskey="p">
+            </label>
+        </div>
+
+        <div>
+            <input type="submit" value="login">
+        </div>
+
+    </form>
+
+</body>
+</html>

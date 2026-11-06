@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Empty Cells</title>
+</head>
+
+<body>
+
+    <table border="1" style="empty-cells:show; width: 80px;">
+        <caption>Show Cells</caption>
+        <tr>
+            <td colspan="2">Cell 1</td>
+        </tr>
+        <tr>
+            <td>Cell 2</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table border="1" style="empty-cells:hide; width: 80px;">
+        <caption>Hide Cells</caption>
+        <tr>
+            <td colspan="2">Cell 1</td>
+        </tr>
+        <tr>
+            <td>Cell 2</td>
+            <td></td>
+        </tr>
+    </table>
+
+</body>
+</html>

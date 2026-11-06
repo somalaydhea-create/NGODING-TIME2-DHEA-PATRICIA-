@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>CSS Animations - animation-iteration-count</title>
+
+<style type="text/css">
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1f4037, #99f2c8);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+@-webkit-keyframes resize {
+from {height: 300px; width: 100px;
+ left: 0; top: 0;}
+50% {height: 100px; width: 100px;
+ left: 300px; top: 0;}
+to {height: 100px; width: 300px;
+ left: 300px; top: 300px;}
+}
+
+@-webkit-keyframes move {
+from {left: 150px; top: 150px;} 
+50% {left: 300px; top: 0;}
+to {left: 400px; top: 200px;}
+}
+
+#anim1 {-webkit-animation-name:resize;
+ -webkit-animation-duration: 4s;
+ -webkit-animation-iteration-count: infinite;
+ position:absolute;
+ background-color: purple;}
+
+#anim2 {-webkit-animation-name:move;
+ -webkit-animation-duration: 4s;
+ -webkit-animation-iteration-count: 2;
+ position:absolute; top: 150px; left: 150px;
+ background-color: orange;}
+
+#anim1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 12px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #6a3093, #a044ff);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+#anim2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 12px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+    color: #49320b;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+
+<body>
+<div id="anim1">Watch me move and change size forever!</div>
+<div id="anim2">Watch me move two times</div>
+</body>
+</html>
